@@ -3,7 +3,6 @@ package imooc.android.com.animation;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -21,7 +20,6 @@ public class ItemView extends View {
         WIN_WIDTH = wm.getDefaultDisplay().getWidth();
         WIN_HEIGHT = wm.getDefaultDisplay().getHeight();
 
-        setBackgroundColor(Color.RED);
     }
 
     public void end() {

@@ -43,7 +43,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void nextView() {
         mCurrentPos = 0;
+        if (mView != null) {
+            mView.setBackgroundResource(R.drawable.block_blue);
+        }
         mView = new ItemView(this);
+        mView.setBackgroundResource(R.drawable.block_red);
         mLayout.addView(mView);
         mViews.add(mView);
     }

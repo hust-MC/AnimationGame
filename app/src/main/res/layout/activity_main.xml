@@ -12,9 +12,9 @@
         android:id="@+id/animation_area"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
         android:layout_weight="4"
-        android:background="@drawable/view_bg"
-        android:layout_margin="5dp"/>
+        android:background="@drawable/view_bg"/>
     <FrameLayout
         android:id="@+id/animation_control"
         android:layout_width="match_parent"
@@ -25,18 +25,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center"
-            android:text="左"/>
+            android:background="@drawable/left"/>
         <Button
             android:id="@+id/right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center"
-            android:text="右"/>
+            android:background="@drawable/right"/>
         <Button
             android:id="@+id/down"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            android:text="下"/>
+            android:background="@drawable/down"/>
     </FrameLayout>
 </LinearLayout>
