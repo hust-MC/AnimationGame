@@ -7,8 +7,10 @@ import android.view.View;
 import android.view.WindowManager;
 
 public class ItemView extends View {
-    private final int WIN_HEIGHT;
-    private final int WIN_WIDTH;
+
+    private final int DENSITY;
+    private final int HEIGHT;
+    private final int WIDTH;
 
     private int mLeft, mRight, mTop, mBottom;
     private boolean mIsEnd;
@@ -17,9 +19,9 @@ public class ItemView extends View {
         super(context);
         WindowManager wm = ((Activity) context).getWindowManager();
 
-        WIN_WIDTH = wm.getDefaultDisplay().getWidth();
-        WIN_HEIGHT = wm.getDefaultDisplay().getHeight();
-
+        DENSITY = (int) context.getResources().getDisplayMetrics().density;
+        WIDTH = wm.getDefaultDisplay().getWidth() - 2 * 5 * DENSITY;
+        HEIGHT = wm.getDefaultDisplay().getHeight() - 2 * 5 * DENSITY;
     }
 
     public void end() {
@@ -41,6 +43,6 @@ public class ItemView extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        setMeasuredDimension(WIN_WIDTH / 6, WIN_HEIGHT / 10);
+        setMeasuredDimension(WIDTH / 6, HEIGHT / 10);
     }
 }
